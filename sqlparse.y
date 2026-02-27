@@ -59,8 +59,8 @@ void orafce_sql_yyerror(List **result, const char *message);
 %parse-param {List **result}
 
 %code requires {
-#include "plvlex.h"
-#include "nodes/pg_list.h"
+	#include "plvlex.h"
+	typedef struct List List;
 }
 
 %union

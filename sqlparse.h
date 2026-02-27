@@ -47,8 +47,8 @@ extern int orafce_sql_yydebug;
 /* "%code requires" blocks.  */
 #line 61 "sqlparse.y"
 
-#include "plvlex.h"
-#include "nodes/pg_list.h"
+	#include "plvlex.h"
+	typedef struct List List;
 
 #line 54 "sqlparse.h"
 
