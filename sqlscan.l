@@ -4,6 +4,9 @@
 */
 #include "postgres.h"
 #include "sqlparse.h"
+/* Bison %name-prefix ‘Î‰ž */
+#define yylval  orafce_sql_yylval
+#define yylloc  orafce_sql_yylloc
 
 /* Not needed now that this file is compiled as part of gram.y */
 /* #include "parser/parse.h" */
