@@ -924,8 +924,8 @@ char *yytext;
 /* 
 ** A scanner for EMP-style numeric ranges 
 */
-#include "sqlparse.h"
 #include "postgres.h"
+#include "sqlparse.h"
 
 /* Not needed now that this file is compiled as part of gram.y */
 /* #include "parser/parse.h" */
