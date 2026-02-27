@@ -560,8 +560,8 @@ static const yytype_int8 yytranslate[] =
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
-       0,    91,    91,    95,    96,   100,   101,   102,   103,   104,
-     105,   106,   107,   108
+       0,    95,    95,    99,   100,   104,   105,   106,   107,   108,
+     109,   110,   111,   112
 };
 #endif
 
@@ -1241,73 +1241,73 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* root: elements  */
-#line 91 "sqlparse.y"
+#line 95 "sqlparse.y"
                      { *((void**)result) = (yyvsp[0].list); }
 #line 1247 "sqlparse.c"
     break;
 
   case 3: /* elements: anyelement  */
-#line 95 "sqlparse.y"
+#line 99 "sqlparse.y"
                            { (yyval.list) = list_make1((yyvsp[0].node));}
 #line 1253 "sqlparse.c"
     break;
 
   case 4: /* elements: elements anyelement  */
-#line 96 "sqlparse.y"
+#line 100 "sqlparse.y"
                                       { (yyval.list) = lappend((yyvsp[-1].list), (yyvsp[0].node));}
 #line 1259 "sqlparse.c"
     break;
 
   case 5: /* anyelement: X_IDENT  */
-#line 100 "sqlparse.y"
+#line 104 "sqlparse.y"
                                 { (yyval.node) = (orafce_lexnode*) CREATE_NODE((yyvsp[0].val), IDENT);  }
 #line 1265 "sqlparse.c"
     break;
 
   case 6: /* anyelement: X_NCONST  */
-#line 101 "sqlparse.y"
+#line 105 "sqlparse.y"
                                 { (yyval.node) = (orafce_lexnode*) CREATE_NODE((yyvsp[0].val), NCONST); }
 #line 1271 "sqlparse.c"
     break;
 
   case 7: /* anyelement: X_SCONST  */
-#line 102 "sqlparse.y"
+#line 106 "sqlparse.y"
                                 { (yyval.node) = (orafce_lexnode*) CREATE_NODE((yyvsp[0].val), SCONST); }
 #line 1277 "sqlparse.c"
     break;
 
   case 8: /* anyelement: X_OP  */
-#line 103 "sqlparse.y"
+#line 107 "sqlparse.y"
                                 { (yyval.node) = (orafce_lexnode*) CREATE_NODE((yyvsp[0].val), OP);    }
 #line 1283 "sqlparse.c"
     break;
 
   case 9: /* anyelement: X_PARAM  */
-#line 104 "sqlparse.y"
+#line 108 "sqlparse.y"
                                         { (yyval.node) = (orafce_lexnode*) CREATE_NODE((yyvsp[0].val), PARAM); }
 #line 1289 "sqlparse.c"
     break;
 
   case 10: /* anyelement: X_COMMENT  */
-#line 105 "sqlparse.y"
+#line 109 "sqlparse.y"
                                 { (yyval.node) = (orafce_lexnode*) CREATE_NODE((yyvsp[0].val), COMMENT);    }
 #line 1295 "sqlparse.c"
     break;
 
   case 11: /* anyelement: X_WHITESPACE  */
-#line 106 "sqlparse.y"
+#line 110 "sqlparse.y"
                                 { (yyval.node) = (orafce_lexnode*) CREATE_NODE((yyvsp[0].val), WHITESPACE); }
 #line 1301 "sqlparse.c"
     break;
 
   case 12: /* anyelement: X_KEYWORD  */
-#line 107 "sqlparse.y"
+#line 111 "sqlparse.y"
                                 { (yyval.node) = (orafce_lexnode*) CREATE_NODE((yyvsp[0].val), KEYWORD); }
 #line 1307 "sqlparse.c"
     break;
 
   case 13: /* anyelement: X_OTHERS  */
-#line 108 "sqlparse.y"
+#line 112 "sqlparse.y"
                                 { (yyval.node) = (orafce_lexnode*) CREATE_NODE((yyvsp[0].val), OTHERS);  }
 #line 1313 "sqlparse.c"
     break;
@@ -1511,7 +1511,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 110 "sqlparse.y"
+#line 114 "sqlparse.y"
 
 
 #undef YYLTYPE

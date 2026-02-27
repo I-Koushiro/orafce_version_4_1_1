@@ -44,6 +44,13 @@
 #if YYDEBUG
 extern int orafce_sql_yydebug;
 #endif
+/* "%code requires" blocks.  */
+#line 61 "sqlparse.y"
+
+#include "plvlex.h"
+#include "nodes/pg_list.h"
+
+#line 54 "sqlparse.h"
 
 /* Token kinds.  */
 #ifndef YYTOKENTYPE
@@ -72,7 +79,7 @@ extern int orafce_sql_yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 63 "sqlparse.y"
+#line 67 "sqlparse.y"
 
 	int 	ival;
 	orafce_lexnode	*node;
@@ -86,7 +93,7 @@ union YYSTYPE
 		char *modificator;
 	}				val;
 
-#line 90 "sqlparse.h"
+#line 97 "sqlparse.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

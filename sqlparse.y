@@ -55,9 +55,13 @@ void orafce_sql_yyerror(List **result, const char *message);
 #define YYFREE		free	/* XXX: should use pfree? */
 
 %}
-
 %locations
 %parse-param {List **result}
+
+%code requires {
+#include "plvlex.h"
+#include "nodes/pg_list.h"
+}
 
 %union
 {
